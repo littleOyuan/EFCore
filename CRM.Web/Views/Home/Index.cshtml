@@ -1,0 +1,13 @@
+﻿@using CRM.Domain.Entities
+@{
+    ViewData["Title"] = "Home Page";
+
+    List<Customer> customers = ViewBag.AllCustomers;
+}
+
+<div>
+    <label>总客户数量：@customers.Count</label><br />
+    <label>客户是否存在：@(ViewBag.IsExist ? "存在" : "不存在")</label>
+</div>
+
+
